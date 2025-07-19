@@ -87,7 +87,68 @@ html {
 
 /* Button Styles */
 .cta-button {
-    @apply inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300;
+    @apply inline-flex items-center justify-center font-bold transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300;
+    padding: 1.1rem 2.5rem;
+    font-size: 1.25rem;
+    border-radius: 2.5rem;
+    background: linear-gradient(90deg, #f59e0b 0%, #3b82f6 100%);
+    color: #fff;
+    box-shadow: 0 6px 24px 0 rgba(59, 130, 246, 0.18), 0 2px 8px 0 rgba(0,0,0,0.10);
+    border: 2px solid #fbbf24;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.03em;
+    text-shadow: 0 1px 2px rgba(30,58,138,0.08);
+}
+.cta-button:hover {
+    background: linear-gradient(90deg, #3b82f6 0%, #f59e0b 100%);
+    box-shadow: 0 8px 32px 0 rgba(59, 130, 246, 0.22), 0 4px 12px 0 rgba(0,0,0,0.13);
+    border-color: #3b82f6;
+    color: #fff;
+    filter: brightness(1.08);
+}
+.cta-button.bg-white {
+    background: #fff;
+    color: #1e3a8a;
+    border: 2px solid #1e3a8a;
+}
+.cta-button.bg-white:hover {
+    background: #1e3a8a;
+    color: #fff;
+    border-color: #3b82f6;
+}
+.cta-button.bg-accent {
+    background: linear-gradient(90deg, #f59e0b 0%, #fbbf24 100%);
+    color: #fff;
+    border: 2px solid #fbbf24;
+}
+.cta-button.bg-accent:hover {
+    background: linear-gradient(90deg, #fbbf24 0%, #f59e0b 100%);
+    color: #fff;
+    border-color: #f59e0b;
+}
+.cta-button.bg-primary {
+    background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 100%);
+    color: #fff;
+    border: 2px solid #3b82f6;
+}
+.cta-button.bg-primary:hover {
+    background: linear-gradient(90deg, #3b82f6 0%, #1e3a8a 100%);
+    color: #fff;
+    border-color: #1e3a8a;
+}
+@media (max-width: 1024px) {
+    .cta-button {
+        font-size: 1.1rem;
+        padding: 1rem 2rem;
+    }
+}
+@media (max-width: 640px) {
+    .cta-button {
+        width: 100%;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        padding: 0.9rem 1.2rem;
+    }
 }
 
 /* Service Cards */
