@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A to Z Contracting LLC - Your Complete Home Solution</title>
+    <meta name="description" content="A to Z Contracting LLC - From renovations to new constructions, we handle it all with precision and care. Licensed, insured, and committed to excellence.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a',
+                        secondary: '#3b82f6',
+                        accent: '#f59e0b'
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-poppins">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-lg transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 animate-fade-in">
+                    <a href="index.html" class="text-2xl font-bold text-primary hover:text-secondary transition-colors duration-300">
+                        A to Z Contracting LLC
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="nav-link active">Home</a>
+                        <a href="about.html" class="nav-link">About</a>
+                        <a href="services.html" class="nav-link">Services</a>
+                        <a href="gallery.html" class="nav-link">Gallery</a>
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button class="mobile-menu-btn" id="mobile-menu-btn">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div class="md:hidden mobile-menu" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 bg-white shadow-lg">
+                <a href="index.html" class="mobile-nav-link active">Home</a>
+                <a href="about.html" class="mobile-nav-link">About</a>
+                <a href="services.html" class="mobile-nav-link">Services</a>
+                <a href="gallery.html" class="mobile-nav-link">Gallery</a>
+                <a href="contact.html" class="mobile-nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary to-secondary overflow-hidden">
+        <div class="absolute inset-0 bg-black/30"></div>
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/placeholder.svg?height=1080&width=1920')"></div>
+        
+        <div class="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 animate-slide-up">
+                A to Z Contracting LLC
+            </h1>
+            <p class="text-xl sm:text-2xl mb-8 animate-slide-up animation-delay-200">
+                Your Complete Home Solution
+            </p>
+            <div class="space-y-4 animate-slide-up animation-delay-400">
+                <p class="text-lg sm:text-xl mb-4">
+                    From renovations to new constructions, we handle it all with precision and care.
+                </p>
+                <p class="text-lg sm:text-xl mb-8">
+                    Licensed, insured, and committed to excellence in every project.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="cta-button bg-accent hover:bg-accent/90">
+                        Contact Us Today
+                    </a>
+                    <a href="tel:4108000520" class="cta-button bg-transparent border-2 border-white hover:bg-white hover:text-primary">
+                        <i class="fas fa-phone mr-2"></i>
+                        (410) 800-0520
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-white text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 scroll-animate">
+                    Our Services
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto scroll-animate">
+                    Comprehensive solutions tailored to your specific needs with quality materials and craftsmanship guaranteed.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card scroll-animate">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Kitchen Remodeling</h3>
+                    <p class="text-gray-600">Transform your kitchen into a beautiful and functional space.</p>
+                </div>
+                
+                <div class="service-card scroll-animate animation-delay-100">
+                    <div class="service-icon">
+                        <i class="fas fa-bath"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Bathroom Remodeling</h3>
+                    <p class="text-gray-600">Create your dream bathroom with modern fixtures and design.</p>
+                </div>
+                
+                <div class="service-card scroll-animate animation-delay-200">
+                    <div class="service-icon">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">General Contracting</h3>
+                    <p class="text-gray-600">Complete construction services for residential and commercial projects.</p>
+                </div>
+                
+                <div class="service-card scroll-animate animation-delay-300">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Basement Finishing</h3>
+                    <p class="text-gray-600">Maximize your home's potential with professional basement finishing.</p>
+                </div>
+                
+                <div class="service-card scroll-animate animation-delay-400">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Roofing & Siding</h3>
+                    <p class="text-gray-600">Protect your home with quality roofing and siding solutions.</p>
+                </div>
+                
+                <div class="service-card scroll-animate animation-delay-500">
+                    <div class="service-icon">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Additions & More</h3>
+                    <p class="text-gray-600">Expand your living space with custom additions and improvements.</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="services.html" class="cta-button bg-primary hover:bg-primary/90 scroll-animate">
+                    View All Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="scroll-animate">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+                        Why Choose A to Z Contracting?
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-certificate text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Licensed & Insured</h3>
+                                <p class="text-gray-600">Fully licensed and insured for your peace of mind.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-users text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Experienced Team</h3>
+                                <p class="text-gray-600">Years of experience in residential and commercial construction.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-star text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Quality Guaranteed</h3>
+                                <p class="text-gray-600">We stand behind our work with quality materials and craftsmanship.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="scroll-animate animation-delay-200">
+                    <img src="/placeholder.svg?height=500&width=600" 
+                         alt="A to Z Contracting team at work" 
+                         class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary text-white">
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6 scroll-animate">
+                Ready to Start Your Project?
+            </h2>
+            <p class="text-xl mb-8 scroll-animate animation-delay-100">
+                Contact us today for a free estimate and let's bring your vision to life!
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center scroll-animate animation-delay-200">
+                <a href="contact.html" class="cta-button bg-accent hover:bg-accent/90">
+                    Get Free Estimate
+                </a>
+                <a href="tel:4108000520" class="cta-button bg-transparent border-2 border-white hover:bg-white hover:text-primary">
+                    <i class="fas fa-phone mr-2"></i>
+                    Call Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">A to Z Contracting LLC</h3>
+                    <p class="text-gray-300 mb-4">Your complete home solution for all construction needs.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition-colors">About</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="gallery.html" class="text-gray-300 hover:text-white transition-colors">Gallery</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <div class="space-y-2">
+                        <p class="text-gray-300">
+                            <i class="fas fa-phone mr-2"></i>
+                            (410) 800-0520
+                        </p>
+                        <p class="text-gray-300">
+                            <i class="fas fa-envelope mr-2"></i>
+                            atozcontractingllc@gmail.com
+                        </p>
+                        <p class="text-gray-300">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            Serving Maryland and surrounding areas
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-300">
+                    &copy; 2024 A to Z Contracting LLC. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

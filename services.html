@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - A to Z Contracting LLC</title>
+    <meta name="description" content="Comprehensive construction services including kitchen remodeling, bathroom remodeling, roofing, siding, and general contracting.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a',
+                        secondary: '#3b82f6',
+                        accent: '#f59e0b'
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-poppins">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-lg transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 animate-fade-in">
+                    <a href="index.html" class="text-2xl font-bold text-primary hover:text-secondary transition-colors duration-300">
+                        A to Z Contracting LLC
+                    </a>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="about.html" class="nav-link">About</a>
+                        <a href="services.html" class="nav-link active">Services</a>
+                        <a href="gallery.html" class="nav-link">Gallery</a>
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </div>
+                </div>
+                
+                <div class="md:hidden">
+                    <button class="mobile-menu-btn" id="mobile-menu-btn">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="md:hidden mobile-menu" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 bg-white shadow-lg">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+                <a href="about.html" class="mobile-nav-link">About</a>
+                <a href="services.html" class="mobile-nav-link active">Services</a>
+                <a href="gallery.html" class="mobile-nav-link">Gallery</a>
+                <a href="contact.html" class="mobile-nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-24 pb-16 bg-gradient-to-br from-primary to-secondary">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <h1 class="text-4xl sm:text-5xl font-bold mb-6 animate-slide-up">Our Services</h1>
+            <p class="text-xl animate-slide-up animation-delay-200">Comprehensive solutions tailored to your specific needs</p>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 scroll-animate">
+                    What We Do
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto scroll-animate">
+                    Quality materials and craftsmanship guaranteed in every project we undertake.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+                <!-- Kitchen Remodeling -->
+                <div class="service-detail-card scroll-animate">
+                    <div class="service-detail-image">
+                        <img src="/placeholder.svg?height=300&width=500" 
+                             alt="Kitchen Remodeling" class="w-full h-64 object-cover rounded-lg">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-home text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900">Kitchen Remodeling</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Transform your kitchen into a beautiful and functional space with our comprehensive remodeling services. From custom cabinetry to modern appliances, we handle every detail.
+                        </p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                Custom cabinet design and installation
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                Countertop installation (granite, quartz, marble)
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                Appliance installation and electrical work
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                Flooring and backsplash installation
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Bathroom Remodeling -->
+                <div class="service-detail-card scroll-animate animation-delay-100">
+                    <div class="service-detail-image">
+                        <img src="/placeholder.svg?height=300&width=500" 
+                             alt="Bathroom Remodeling" class="w-full h-64 object-cover rounded-lg">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-bath text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900">Bathroom Remodeling</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Create your dream bathroom with modern fixtures and elegant design. We specialize in both full renovations and partial updates to suit your needs and budget.
+                        </p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                Complete bathroom renovations
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                Tile work and waterproofing
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                Plumbing and electrical updates
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                Vanity and fixture installation
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Basement Finishing -->
+                <div class="service-detail-card scroll-animate animation-delay-200">
+                    <div class="service-detail-image">
+                        <img src="/placeholder.svg?height=300&width=500" 
+                             alt="Basement Finishing" class="w-full h-64 object-cover rounded-lg">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-tools text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900">Basement Finishing</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Maximize your home's potential with professional basement finishing. Create additional living space, entertainment areas, or home offices with our expert craftsmanship.
+                        </p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                Moisture control and waterproofing
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                Framing and drywall installation
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                Flooring and ceiling solutions
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                Electrical and lighting installation
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Roofing -->
+                <div class="service-detail-card scroll-animate animation-delay-300">
+                    <div class="service-detail-image">
+                        <img src="/placeholder.svg?height=300&width=500" 
+                             alt="Roofing Services" class="w-full h-64 object-cover rounded-lg">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-building text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900">Roofing</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Protect your home with quality roofing solutions. From repairs to complete replacements, we use premium materials and proven techniques to ensure lasting protection.
+                        </p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                Roof inspections and repairs
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                Complete roof replacements
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                Gutter installation and repair
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                Emergency roof services
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Siding -->
+                <div class="service-detail-card scroll-animate animation-delay-400">
+                    <div class="service-detail-image">
+                        <img src="/placeholder.svg?height=300&width=500" 
+                             alt="Siding Services" class="w-full h-64 object-cover rounded-lg">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-home text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900">Siding</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Enhance your home's curb appeal and energy efficiency with professional siding installation. We work with various materials to match your style and budget.
+                        </p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                Vinyl, wood, and fiber cement siding
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                Siding repairs and maintenance
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                Insulation and weatherproofing
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                Trim and accent installation
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Windows & Doors -->
+                <div class="service-detail-card scroll-animate animation-delay-500">
+                    <div class="service-detail-image">
+                        <img src="/placeholder.svg?height=300&width=500" 
+                             alt="Windows & Doors Installation" class="w-full h-64 object-cover rounded-lg">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-door-open text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900">Windows & Doors Installation</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Improve your home's energy efficiency and security with new windows and doors. We install high-quality products that enhance both function and aesthetics.
+                        </p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                Energy-efficient window installation
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                Entry and interior door installation
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                Storm doors and security doors
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                Window and door repairs
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Services -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 scroll-animate">
+                    Additional Services
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto scroll-animate">
+                    We offer a complete range of construction and renovation services to meet all your needs.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6 scroll-animate">
+                    <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-tree text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Decks & Patios</h3>
+                    <p class="text-gray-600">Create beautiful outdoor living spaces with custom deck and patio construction.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-6 scroll-animate animation-delay-100">
+                    <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-plus text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Additions</h3>
+                    <p class="text-gray-600">Expand your living space with professionally designed and built home additions.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-6 scroll-animate animation-delay-200">
+                    <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-hammer text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">General Contracting</h3>
+                    <p class="text-gray-600">Complete construction services for residential and commercial projects of all sizes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary text-white">
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6 scroll-animate">
+                Ready to Start Your Project?
+            </h2>
+            <p class="text-xl mb-8 scroll-animate animation-delay-100">
+                Contact us today for a free estimate and consultation on your construction needs.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center scroll-animate animation-delay-200">
+                <a href="contact.html" class="cta-button bg-accent hover:bg-accent/90">
+                    Get Free Estimate
+                </a>
+                <a href="tel:4108000520" class="cta-button bg-transparent border-2 border-white hover:bg-white hover:text-primary">
+                    <i class="fas fa-phone mr-2"></i>
+                    (410) 800-0520
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">A to Z Contracting LLC</h3>
+                    <p class="text-gray-300 mb-4">Your complete home solution for all construction needs.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition-colors">About</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="gallery.html" class="text-gray-300 hover:text-white transition-colors">Gallery</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <div class="space-y-2">
+                        <p class="text-gray-300">
+                            <i class="fas fa-phone mr-2"></i>
+                            (410) 800-0520
+                        </p>
+                        <p class="text-gray-300">
+                            <i class="fas fa-envelope mr-2"></i>
+                            atozcontractingllc@gmail.com
+                        </p>
+                        <p class="text-gray-300">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            Serving Maryland and surrounding areas
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-300">
+                    &copy; 2024 A to Z Contracting LLC. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - A to Z Contracting LLC</title>
+    <meta name="description" content="View our completed projects and see the quality of our construction work. Browse our gallery of kitchen remodels, bathroom renovations, and more.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a',
+                        secondary: '#3b82f6',
+                        accent: '#f59e0b'
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-poppins">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-lg transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 animate-fade-in">
+                    <a href="index.html" class="text-2xl font-bold text-primary hover:text-secondary transition-colors duration-300">
+                        A to Z Contracting LLC
+                    </a>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="about.html" class="nav-link">About</a>
+                        <a href="services.html" class="nav-link">Services</a>
+                        <a href="gallery.html" class="nav-link active">Gallery</a>
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </div>
+                </div>
+                
+                <div class="md:hidden">
+                    <button class="mobile-menu-btn" id="mobile-menu-btn">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="md:hidden mobile-menu" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 bg-white shadow-lg">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+                <a href="about.html" class="mobile-nav-link">About</a>
+                <a href="services.html" class="mobile-nav-link">Services</a>
+                <a href="gallery.html" class="mobile-nav-link active">Gallery</a>
+                <a href="contact.html" class="mobile-nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-24 pb-16 bg-gradient-to-br from-primary to-secondary">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <h1 class="text-4xl sm:text-5xl font-bold mb-6 animate-slide-up">Project Gallery</h1>
+            <p class="text-xl animate-slide-up animation-delay-200">View our completed projects to see the quality of our work</p>
+        </div>
+    </section>
+
+    <!-- Gallery Filter -->
+    <section class="py-8 bg-white border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="gallery-filter-btn active" data-filter="all">All Projects</button>
+                <button class="gallery-filter-btn" data-filter="kitchen">Kitchens</button>
+                <button class="gallery-filter-btn" data-filter="bathroom">Bathrooms</button>
+                <button class="gallery-filter-btn" data-filter="basement">Basements</button>
+                <button class="gallery-filter-btn" data-filter="exterior">Exterior</button>
+                <button class="gallery-filter-btn" data-filter="addition">Additions</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Kitchen Projects -->
+                <div class="gallery-item" data-category="kitchen">
+                    <div class="gallery-card">
+                        <img src="/placeholder.svg?height=400&width=600" 
+                             alt="Modern Kitchen Remodel" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3 class="text-xl font-semibold text-white mb-2">Modern Kitchen Remodel</h3>
+                                <p class="text-gray-200 mb-4">Complete kitchen transformation with custom cabinetry</p>
+                                <button class="gallery-view-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand-alt mr-2"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="kitchen">
+                    <div class="gallery-card">
+                        <img src="/placeholder.svg?height=400&width=600" 
+                             alt="Luxury Kitchen Design" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3 class="text-xl font-semibold text-white mb-2">Luxury Kitchen Design</h3>
+                                <p class="text-gray-200 mb-4">High-end finishes with marble countertops</p>
+                                <button class="gallery-view-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand-alt mr-2"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="kitchen">
+                    <div class="gallery-card">
+                        <img src="/placeholder.svg?height=400&width=600" 
+                             alt="Farmhouse Kitchen" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3 class="text-xl font-semibold text-white mb-2">Farmhouse Kitchen</h3>
+                                <p class="text-gray-200 mb-4">Rustic charm with modern functionality</p>
+                                <button class="gallery-view-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand-alt mr-2"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bathroom Projects -->
+                <div class="gallery-item" data-category="bathroom">
+                    <div class="gallery-card">
+                        <img src="/placeholder.svg?height=400&width=600" 
+                             alt="Spa-Like Bathroom" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3 class="text-xl font-semibold text-white mb-2">Spa-Like Bathroom</h3>
+                                <p class="text-gray-200 mb-4">Luxurious master bathroom renovation</p>
+                                <button class="gallery-view-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand-alt mr-2"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="bathroom">
+                    <div class="gallery-card">
+                        <img src="/placeholder.svg?height=400&width=600" 
+                             alt="Modern Bathroom Design" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3 class="text-xl font-semibold text-white mb-2">Modern Bathroom Design</h3>
+                                <p class="text-gray-200 mb-4">Clean lines with premium finishes</p>
+                                <button class="gallery-view-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand-alt mr-2"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Basement Projects -->
+                <div class="gallery-item" data-category="basement">
+                    <div class="gallery-card">
+                        <img src="/placeholder.svg?height=400&width=600" 
+                             alt="Basement Entertainment Area" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3 class="text-xl font-semibold text-white mb-2">Basement Entertainment Area</h3>
+                                <p class="text-gray-200 mb-4">Complete basement transformation</p>
+                                <button class="gallery-view-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand-alt mr-2"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="basement">
+                    <div class="gallery-card">
+                        <img src="/placeholder.svg?height=400&width=600" 
+                             alt="Basement Home Office" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3 class="text-xl font-semibold text-white mb-2">Basement Home Office</h3>
+                                <p class="text-gray-200 mb-4">Professional workspace in finished basement</p>
+                                <button class="gallery-view-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand-alt mr-2"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exterior Projects -->
+                <div class="gallery-item" data-category="exterior">
+                    <div class="gallery-card">
+                        <img src="/placeholder.svg?height=400&width=600" 
+                             alt="Exterior Renovation" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3 class="text-xl font-semibold text-white mb-2">Complete Exterior Renovation</h3>
+                                <p class="text-gray-200 mb-4">New siding, roofing, and windows</p>
+                                <button class="gallery-view-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand-alt mr-2"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="exterior">
+                    <div class="gallery-card">
+                        <img src="/placeholder.svg?height=400&width=600" 
+                             alt="Custom Deck Construction" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3 class="text-xl font-semibold text-white mb-2">Custom Deck Construction</h3>
+                                <p class="text-gray-200 mb-4">Multi-level deck with premium materials</p>
+                                <button class="gallery-view-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand-alt mr-2"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Addition Projects -->
+                <div class="gallery-item" data-category="addition">
+                    <div class="gallery-card">
+                        <img src="/placeholder.svg?height=400&width=600" 
+                             alt="Home Addition" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3 class="text-xl font-semibold text-white mb-2">Two-Story Addition</h3>
+                                <p class="text-gray-200 mb-4">Seamless integration with existing home</p>
+                                <button class="gallery-view-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand-alt mr-2"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="addition">
+                    <div class="gallery-card">
+                        <img src="/placeholder.svg?height=400&width=600" 
+                             alt="Sunroom Addition" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3 class="text-xl font-semibold text-white mb-2">Sunroom Addition</h3>
+                                <p class="text-gray-200 mb-4">Bright and airy living space extension</p>
+                                <button class="gallery-view-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand-alt mr-2"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <img id="lightbox-image" src="/placeholder.svg" alt="">
+            <div class="lightbox-info">
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-description"></p>
+            </div>
+            <div class="lightbox-nav">
+                <button class="lightbox-prev" onclick="prevImage()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="lightbox-next" onclick="nextImage()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary text-white">
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6 scroll-animate">
+                Ready to Create Your Dream Project?
+            </h2>
+            <p class="text-xl mb-8 scroll-animate animation-delay-100">
+                Let us bring your vision to life with the same quality and attention to detail shown in our gallery.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center scroll-animate animation-delay-200">
+                <a href="contact.html" class="cta-button bg-accent hover:bg-accent/90">
+                    Start Your Project
+                </a>
+                <a href="tel:4108000520" class="cta-button bg-transparent border-2 border-white hover:bg-white hover:text-primary">
+                    <i class="fas fa-phone mr-2"></i>
+                    (410) 800-0520
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">A to Z Contracting LLC</h3>
+                    <p class="text-gray-300 mb-4">Your complete home solution for all construction needs.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition-colors">About</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="gallery.html" class="text-gray-300 hover:text-white transition-colors">Gallery</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <div class="space-y-2">
+                        <p class="text-gray-300">
+                            <i class="fas fa-phone mr-2"></i>
+                            (410) 800-0520
+                        </p>
+                        <p class="text-gray-300">
+                            <i class="fas fa-envelope mr-2"></i>
+                            atozcontractingllc@gmail.com
+                        </p>
+                        <p class="text-gray-300">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            Serving Maryland and surrounding areas
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-300">
+                    &copy; 2024 A to Z Contracting LLC. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
